@@ -5,6 +5,8 @@
 
 ::-webkit-scrollbar {
   background: whiteSmoke;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -22,6 +24,49 @@
   margin: auto;
 }
 
+p:before, p:after {
+  clear: both;
+  content: '';
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+[class^="col"] {
+  flex-grow: 1;
+  display: flex;
+  padding: 0 10px;
+}
+
+.col-0 { width: 0%; }
+.col-10 { width: 10%; flex-basis: 10%; }
+.col-20 { width: 20%; flex-basis: 20%; }
+.col-25 { width: 25%; flex-basis: 25%; }
+.col-30 { width: 30%; flex-basis: 30%; }
+.col-33 { width: 33%; flex-basis: 33%; }
+.col-40 { width: 40%; flex-basis: 40%; }
+.col-50 { width: 50%; flex-basis: 50%; }
+.col-60 { width: 60%; flex-basis: 60%; }
+.col-66 { width: 66%; flex-basis: 66%; }
+.col-70 { width: 70%; flex-basis: 70%; }
+.col-75 { width: 75%; flex-basis: 75%; }
+.col-80 { width: 80%; flex-basis: 80%; }
+.col-90 { width: 90%; flex-basis: 90%; }
+.col-100 { width: 100%; }
+
+.col-200px { width: 200px; }
+.col-400px { width: 400px; }
+
 .left { float: left; }
 .right { float: right; }
 
@@ -35,6 +80,7 @@ body {
   font-family: 'Exo 2', 'Open Sans', Arial;
   font-size: 24px;
   font-weight: 500;
+  height: auto!important;
 }
 
 a {
@@ -45,6 +91,7 @@ h1, h2 {
   font-family: 'Montserrat', sans-serif;
   text-align: inherit;
   margin: 0px;
+  display: block;
 }
 
 h1 {
@@ -58,11 +105,13 @@ h1 {
   border-bottom: 1px solid;
 }
 
+h2 {
+}
+
 header, section, aside, footer {
   position: relative;
   width: 100%;
   background-position: center;
-  text-align: center;
   background: white;
 }
 
@@ -71,6 +120,7 @@ header {
   background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 50%), linear-gradient(to left, #005952 0%, #005E20 100%);
   background-size: cover;
   color: white;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,6 +133,7 @@ header {
   overflow: hidden;
   position: relative;
   z-index: 800000;
+  text-align: center;
 }
 
 header.light {
@@ -158,17 +209,66 @@ p.lead {
 
 #content {
   top: 0px;
-  display: flex;
   /* min-height: 500px;
   min-height: 100vh; */
 }
 
+#content h2 {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
 section {
   display: block;
+  padding: 2em 0;
+}
+
+#rsvp {
+  text-align: center;
+}
+
+.github-user {
+  position: relative;
+}
+
+.github-user .thumb {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-size: cover!important;
+  margin: 10px;
+}
+
+.github-user .popup {
+  position: absolute;
+  /* top: -1.5em;
+  // left: -50%; */
+}
+
+#map {
+  width: 100%;
 }
 
 footer {
-  min-height: 100%;
-  min-height: 100vh;
+  /* min-height: 100%;
+  min-height: 100vh; */
   background-color: #404040;
+  padding: 2em 0;
+  color: white;
+}
+
+.at:after {
+  content: '@';
+}
+
+@media screen and (max-width: 1200px) {
+  [class^="col"] {
+    display: block!important;
+    width: 100%!important;
+    flex-basis: 100%!important;
+  }
+  .hidden-mobile {
+    display: none!important;
+  }
 }
