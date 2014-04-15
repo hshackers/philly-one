@@ -218,6 +218,12 @@ p.lead {
   border-bottom: 1px solid;
 }
 
+#content i {
+  font-size: 120px;
+  line-height: 1.2em;
+  float: right;
+}
+
 section {
   display: block;
   padding: 2em 0;
