@@ -1,5 +1,4 @@
 @import url(includes/normalize.css);
-@import url(includes/unsemantic-grid-responsive.css);
 @import url(http://fonts.googleapis.com/css?family=Exo+2:500,700|Montserrat:400,700|Dosis:300,700);
 
 * { box-sizing: border-box; }
@@ -15,6 +14,12 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #507192;
+}
+
+.container {
+  display: block;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .left { float: left; }
@@ -160,4 +165,10 @@ p.lead {
 
 section {
   display: block;
+}
+
+footer {
+  min-height: 100%;
+  min-height: 100vh;
+  background-color: #404040;
 }
