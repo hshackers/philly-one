@@ -1,0 +1,163 @@
+@import url(includes/normalize.css);
+@import url(includes/unsemantic-grid-responsive.css);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:500,700|Montserrat:400,700|Dosis:300,700);
+
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar {
+  background: whiteSmoke;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: solid whiteSmoke 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #507192;
+}
+
+.left { float: left; }
+.right { float: right; }
+
+.accent { color: #19D7DF; }
+.accent-bg { background-color: #19D7DF; color: white; }
+::selection { background-color: #19D7DF; color: white; }
+::-moz-selection { background-color: #19D7DF; color: white; }
+
+body {
+  vertical-align: middle;
+  font-family: 'Exo 2', 'Open Sans', Arial;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: inherit;
+  margin: 0px;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 85px;
+  line-height: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 20px auto;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+header, section, aside, footer {
+  position: relative;
+  width: 100%;
+  background-position: center;
+  text-align: center;
+  background: white;
+}
+
+header {
+  background-color: gray;
+  background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 50%), linear-gradient(to left, #005952 0%, #005E20 100%);
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3rem 16.66667%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  transition: all .25s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  z-index: 800000;
+}
+
+header.light {
+  background-color: white;
+  color: black;
+  text-shadow: none;
+}
+
+header:before {
+  background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.5) 50%), linear-gradient(pink, blue);
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all .25s ease-in-out;
+}
+
+header.light:before {
+  background-image: linear-gradient(lightGray, lightGray);
+  transition: all .25s ease-in-out;
+}
+
+header:hover:before {
+  opacity: 0.7;
+}
+
+header div {
+  position: relative;
+}
+
+i.logo {
+  font-size: 150px;
+  position: relative;
+  margin-top: -1em;
+  display: block;
+}
+
+p.lead {
+  font-size: 38px;
+  line-height: 38px;
+}
+
+.down {
+  position: absolute;
+  bottom: 0px;
+  left: 45%;
+  left: calc(50% - 36px);
+  margin-left: -36px;
+  width: 72px;
+  margin: auto;
+  padding: 6px;
+  padding-bottom: 26px;
+  transition: all .25s ease-in-out;
+}
+
+.down:hover {
+  padding-bottom: 36px;
+}
+
+.down svg {
+  max-width: 60px;
+  height: 50px;
+  display: block;
+  margin-bottom: -30px;
+}
+
+.down path {
+  fill: white;
+}
+
+#content {
+  top: 0px;
+  display: flex;
+  /* min-height: 500px;
+  min-height: 100vh; */
+}
+
+section {
+  display: block;
+}
