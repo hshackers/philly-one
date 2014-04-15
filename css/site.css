@@ -34,8 +34,8 @@ p:before, p:after {
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  align-items: center;
+  -webkit-align-items: top;
+  align-items: top;
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex-wrap: wrap;
