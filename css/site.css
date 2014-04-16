@@ -209,6 +209,7 @@ p.lead {
 
 #content {
   top: 0px;
+  text-align: center;
   /* min-height: 500px;
   min-height: 100vh; */
 }
@@ -219,9 +220,10 @@ p.lead {
 }
 
 #content i {
-  font-size: 120px;
-  line-height: 1.2em;
-  float: right;
+  font-size: 150px;
+  margin-bottom: 0.25em;
+  margin-top: -0.25em;
+  display: block;
 }
 
 section {
@@ -295,5 +297,12 @@ footer {
   }
   .container {
     padding: 0 10px;
+  }
+  h1 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  i.logo {
+    margin-top: 0px;
   }
 }
