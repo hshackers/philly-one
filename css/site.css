@@ -8,14 +8,12 @@
   width: 8px;
   height: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.3);
   border: solid whiteSmoke 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #507192;
+  background-color: #26C7DF;
 }
 
 .container {
@@ -167,6 +165,25 @@ header div {
   position: relative;
 }
 
+header p a {
+  text-decoration: none;
+  color: white;
+  transition: all .25s ease-in-out;
+  margin: 0 2px;
+  padding: 0 6px;
+  border-radius: 6px;
+}
+
+header p a:hover {
+  background: black;
+}
+
+header p i {
+  display: inline-block;
+  margin-top: -4px;
+  vertical-align: top;
+}
+
 i.logo {
   font-size: 150px;
   position: relative;
@@ -207,6 +224,28 @@ p.lead {
   fill: white;
 }
 
+.pole {
+  display: block;
+  text-align: center;
+}
+
+.pole svg {
+  max-width: 120px;
+  height: 100px;
+  display: block;
+  opacity: 0.45;
+  margin: 0 auto;
+  transition: all .25s ease-in-out;
+}
+
+.pole path {
+  fill: black;
+}
+
+.pole:hover svg {
+  opacity: 1;
+}
+
 #content {
   top: 0px;
   text-align: center;
@@ -231,55 +270,166 @@ section {
   padding: 2em 0;
 }
 
-#rsvp {
+#soon, #rsvp {
   text-align: center;
 }
 
 .github-user {
   position: relative;
+  display: inline-block;
+  background: white;
+  transition: background 300ms ease-in-out;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 4px;
+  width: 108px;
+  height: 108px;
+  line-height: 1em;
+}
+
+.github-user:hover {
+  background: #26C7DF;
 }
 
 .github-user .thumb {
   display: inline-block;
-  width: 70px;
-  height: 70px;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover!important;
-  margin: 10px;
 }
 
 .github-user .popup {
   position: absolute;
-  display: block;
-  overflow: visible;
+  bottom: 120%;
+  left: -80px;
+  right: -80px;
+  z-index: 500;
   text-align: center;
-  
+  /* opacity: 0;
+  display: none;
+  transition: opacity 100ms ease;  
   /* top: -1.5em;
   // left: -50%; */
 }
 
 .github-user .title {
-  font-size: 60%;
-  padding: 2px 6px;
-  background: black;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #000000);
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px 20px;
+  display: inline-block;
+  min-width: 50px;  background: linear-gradient(rgba(0, 0, 0, 0.6), #000000);
   box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 0px inset;
   color: white;
-  border-radius: 4px;
-  display: inline-block;
-  margin: auto;
+  transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: scale(0.5) translateY(18px);
+  -webkit-transform: scale(0.5) translateY(18px);
+  opacity: 0;
+}
+
+.github-user .title:after {
+  content: ' ';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  bottom: -10px;
+  left: 42.5%;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+}
+
+.github-user:hover .title {
+  transform: scale(1) translateY(4px);
+  -webkit-transform: scale(1) translateY(4px);
+  opacity: 1;
 }
 
 #map {
-  width: 100%;
+  position: relative;
 }
 
-footer {
+#map iframe {
+  width: 100%;
+  line-height: 1em;
+}
+
+#map i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: pink;
+  font-size: 40px;
+}
+
+#sponsors {
+  padding: 2em 0;
+  color: white;
+  text-align: center;
+}
+
+#location, #share, footer {
   /* min-height: 100%;
   min-height: 100vh; */
   background-color: #404040;
   padding: 2em 0;
   color: white;
+  text-align: center;
+}
+
+#sponsors, #share {
+  margin-top: -12px;
+}
+
+#share a {
+  transition: all .25s ease-in-out;
+  font-size: 120px;
+  margin: 10px;
+  line-height: .5em;
+  position: relative;
+  z-index: 1;
+}
+
+#share a:hover {
+  opacity: 0.7;
+}
+
+#share a.icon-facebook-circled {
+  color: #3b5998;
+}
+
+#share a.icon-twitter-circled {
+  color: #55acee;
+}
+
+#share a.icon-facebook-circled:after, #share a.icon-twitter-circled:after {
+    content: ' ';
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    left: 23px;
+    top: 60px;
+    z-index: -1
+
+}
+
+
+
+footer {
+  background-image: url(/img/stripe.png);
+  background-repeat: repeat-x;
+  background-size: 10px 20px;
+}
+
+footer i {
+  font-size: 150%;
+  display: block;
+  margin-top: -11px;
+  margin-right: 6px;
 }
 
 .at:after {
