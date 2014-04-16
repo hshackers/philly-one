@@ -251,26 +251,29 @@ section {
   font-weight: bold;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   text-shadow: 0 -1px 0 #354C8C;
-  &:hover {
-    background: #5B7BD5;
-    background: -webkit-gradient(linear, center top, center bottom, from(#5B7BD5), to(#4864B1));
-    background: linear-gradient(#5B7BD5, #4864B1);
-    border-color: #5874C3 #4961A8 #41599F;
-    box-shadow: inset 0 0 1px #607FD6;
-  }
-  i.icon-facebook {
-    font-size: 100%;
-    line-height: 50%;
-    display: inline-block;
-    vertical-align: text-top;
-    margin-top: 2px;
-    background: #FFF;
-    border-radius: 2PX;
-    color: #4C69BA;
-    padding: 1px;
-    text-shadow: none;
-    }
 }
+
+.facebook-button:hover {
+  background: #5B7BD5;
+  background: -webkit-gradient(linear, center top, center bottom, from(#5B7BD5), to(#4864B1));
+  background: linear-gradient(#5B7BD5, #4864B1);
+  border-color: #5874C3 #4961A8 #41599F;
+  box-shadow: inset 0 0 1px #607FD6;
+}
+
+.facebook-button i.icon-facebook {
+  font-size: 100%;
+  line-height: 50%;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 2px;
+  background: #FFF;
+  border-radius: 2px;
+  color: #4C69BA;
+  padding: 1px;
+  text-shadow: none;
+  }
+
 
 .github-user {
   position: relative;
