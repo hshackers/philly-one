@@ -331,6 +331,14 @@ section {
   text-align: center;
 }
 
+#sponsors a {
+  transition: all .25s ease-in-out;
+}
+
+#sponsors a:hover {
+  opacity: 0.5;
+}
+
 #location, #share, footer {
   /* min-height: 100%;
   min-height: 100vh; */
