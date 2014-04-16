@@ -70,10 +70,10 @@ p:before, p:after {
 .left { float: left; }
 .right { float: right; }
 
-.accent { color: #19D7DF; }
-.accent-bg { background-color: #19D7DF; color: white; }
-::selection { background-color: #19D7DF; color: white; }
-::-moz-selection { background-color: #19D7DF; color: white; }
+.accent { color: #26C7DF; }
+.accent-bg { background-color: #26C7DF; color: white; }
+::selection { background-color: #26C7DF; color: white; }
+::-moz-selection { background-color: #26C7DF; color: white; }
 
 body {
   vertical-align: middle;
