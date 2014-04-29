@@ -12,7 +12,7 @@ title: HS Hackers Philly Meetup
         <i class="icon-time"></i> May 10
       </a>
       <a href="#map">
-        <i class="icon-point"></i> Drexel University (TBD)
+        <i class="icon-point"></i> MacAlister Hall, Drexel U
       </a>
     </p>
   </div>
@@ -95,9 +95,20 @@ title: HS Hackers Philly Meetup
     <p>Philadelphia, PA: To be determined!</p>
   </div>
 </section>-->
+<section id="location">
+  <div class="container">
+    <i class="icon-mappy logo"></i>
+    <h2>Drexel University</h2>
+    Exact venue TBD later this week!<br>
+    (It's somewhere on this map.)<br><br>
+    <!--<h2>MacAlister Hall</h2>
+    3250 Chestnut Street<br>
+    Philadelphia, PA<br>
+    (Next to Creese Student Center)<br>-->
+    <a href="https://www.google.com/maps/dir/Philadelphia+30th+Street+Station/James+Creese+Student+Center,+3210+Chestnut+St,+Philadelphia,+PA+19104/@39.9543696,-75.1868537,833m/data=!3m1!1e3!4m15!4m14!1m5!1m1!1s0x89c6c6497692510b:0x27d1c8c88c12e88!2m2!1d-75.181041!2d39.955615!1m5!1m1!1s0x89c6c64fea6f3ab9:0x58dcb3cec88575d5!2m2!1d-75.188394!2d39.953593!3e2!5i1"><i class="icon-transit"></i> 10 min. walk from 30th Street Station</a>
+  </div>
+</section>
 <div id="map">
-  <i class="icon-pin"></i>
-  <iframe src="https://a.tiles.mapbox.com/v3/viclou.i07ia0e8/page.html?secure=1#14/39.9584/-75.1648" width="800" height="375" class="hidden-mobile" frameborder="0" style="border:0"></iframe>
 </div>
 <section class="accent-bg" id="sponsors">
   <div class="container">
@@ -116,6 +127,7 @@ title: HS Hackers Philly Meetup
 </section>
 <section id="share">
   <div class="container">
+    <i class="icon-love logo"></i>
     <h2>Spread the word!</h2>
     <p>
       <a class="icon-facebook-circled" href="https://www.facebook.com/sharer/sharer.php?u=http://philly.hshackers.org&t=Join me for a meetup in Philly!" target="_blank"></a>
@@ -124,3 +136,30 @@ title: HS Hackers Philly Meetup
     </p>
   </div>
 </section>
+<script>
+var map = L.mapbox.map('map', 'viclou.shujif6r')
+    .setView([2.1252,24.1440], 15);
+
+    L.mapbox.featureLayer({
+        // this feature is in the GeoJSON format: see geojson.org
+        // for the full specification
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            // coordinates here are in longitude, latitude order because
+            // x, y is the standard for GeoJSON and many formats
+            coordinates: [2.1252,24.1440]
+        },
+        properties: {
+            title: 'A Single Marker',
+            description: 'Just one of me',
+            // one can customize markers by adding simplestyle properties
+            // http://mapbox.com/developers/simplestyle/
+            'marker-size': 'large',
+            'marker-color': '#f0a'
+        }
+    }).addTo(map);
+    map.scrollWheelZoom.disable();
+
+</script>
+

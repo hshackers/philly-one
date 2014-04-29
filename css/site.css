@@ -6,16 +6,17 @@
 * { box-sizing: border-box; }
 
 ::-webkit-scrollbar {
-  background: whiteSmoke;
+  background: #26C7DF;
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
-  border: solid whiteSmoke 4px;
+  background-color: white;
+  border: solid white 4px;
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #26C7DF;
+  background-color: #white;
 }
 
 .container {
@@ -40,6 +41,7 @@ body {
   font-size: 24px;
   font-weight: 500;
   height: auto!important;
+  overflow-x: hidden;
 }
 
 a {
@@ -62,6 +64,12 @@ h1 {
   margin: 20px auto;
   border-top: 1px solid;
   border-bottom: 1px solid;
+  transition: text-shadow 0.15s ease;
+  pointer: cursor;
+}
+
+h1:hover {
+  text-shadow: 0 1px 0 #C9CFCE, 0 2px 0 #BCC2C2, 0 3px 0 #AFB6B6, 0 4px 0 #A4ADAC, 0 5px 0 #9FA8A7, 0 6px 0 #99A3A2, 0 7px 0 #97A1A0, 0 8px 0 #949E9D, 0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
@@ -148,8 +156,13 @@ header p i {
 i.logo {
   font-size: 150px;
   position: relative;
-  margin-top: -1em;
   display: block;
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+header i.logo {
+  margin-top: -1em;
 }
 
 p.lead {
@@ -348,8 +361,29 @@ section {
   opacity: 1;
 }
 
+#location {
+
+}
+
+#location a {
+  padding: 6px 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  transition: all 300ms ease;
+  border-radius: 8px;
+}
+
+#location a:hover {
+  box-shadow: 0 0 12px #26C7DF;
+}
+
 #map {
   position: relative;
+  height: 500px;
+  display: block;
+  background: #404040;
 }
 
 #map iframe {
@@ -365,10 +399,12 @@ section {
   font-size: 40px;
 }
 
-#sponsors {
+#location, #sponsors {
   padding: 2em 0;
-  color: white;
+  color: #363636;
   text-align: center;
+  background: url(../img/giftly.png);
+  background-size: 150px;
 }
 
 #sponsors a {
@@ -379,7 +415,7 @@ section {
   opacity: 0.5;
 }
 
-#location, #share, footer {
+#share, footer {
   /* min-height: 100%;
   min-height: 100vh; */
   background-color: #404040;
@@ -417,7 +453,7 @@ section {
     content: ' ';
     background: white;
     width: 50px;
-    height: 50px;
+    height: 55px;
     display: block;
     position: absolute;
     left: 23px;
