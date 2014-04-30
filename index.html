@@ -11,7 +11,7 @@ title: HS Hackers Philly Meetup
         <a href="#schedule">
           <i class="icon-time"></i> May 10
         </a>
-        <a href="#map">
+        <a href="#location">
           <i class="icon-point"></i> MacAlister Hall, Drexel U
         </a>
       </p>
@@ -193,7 +193,7 @@ title: HS Hackers Philly Meetup
 </section>
 <script>
 var map = L.mapbox.map('map', 'viclou.shujif6r')
-    .setView([2.1252,24.1440], 15);
+    .setView([2.1252,24.1440], 15)
 
     L.mapbox.featureLayer({
         // this feature is in the GeoJSON format: see geojson.org
@@ -206,8 +206,8 @@ var map = L.mapbox.map('map', 'viclou.shujif6r')
             coordinates: [2.1252,24.1440]
         },
         properties: {
-            title: 'A Single Marker',
-            description: 'Just one of me',
+            title: 'MacAlister Hall',
+            description: '3250 Chestnut Street',
             // one can customize markers by adding simplestyle properties
             // http://mapbox.com/developers/simplestyle/
             'marker-size': 'large',
