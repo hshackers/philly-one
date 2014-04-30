@@ -1,5 +1,9 @@
+if ( !((navigator.userAgent.indexOf('iOS') != -1) || (navigator.userAgent.indexOf('Android') != -1) || (navigator.userAgent.indexOf('Mobile') != -1) || (navigator.userAgent.indexOf('Phone') != -1)) ) 
+   {
+    var s = skrollr.init();
+   }
+
 $( document ).ready(function() {
-  var s = skrollr.init();
   console.log( "Bored? http://www.youtube.com/watch?v=dQw4w9WgXcQ!" );
 });
 $(function() {
