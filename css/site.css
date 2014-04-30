@@ -87,15 +87,14 @@ header {
   background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 50%), linear-gradient(to left, #005952 0%, #005E20 100%);
   background-size: cover;
   color: white;
-  display: -webkit-flex;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   padding: 3rem 16.66667%;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 750px;
   transition: all .25s ease-in-out;
   overflow: hidden;
   position: relative;
@@ -162,7 +161,7 @@ i.logo {
 }
 
 header i.logo {
-  margin-top: -1em;
+  margin-top: -20px;
 }
 
 p.lead {
@@ -481,7 +480,7 @@ footer i {
   content: '@';
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   [class^="col"] {
     display: block!important;
     width: 100%!important;
@@ -499,5 +498,9 @@ footer i {
   }
   i.logo {
     margin-top: 0px;
+  }
+  header p a {
+    display: block;
+    margin-bottom: 10px;
   }
 }
