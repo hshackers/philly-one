@@ -30,7 +30,7 @@ p:before, p:after {
   content: '';
 }
 
-.accent { color: #26C7DF; }
+.accent, span.time { color: #26C7DF; }
 .accent-bg { background-color: #26C7DF; color: white; }
 ::selection { background-color: #26C7DF; color: white; }
 ::-moz-selection { background-color: #26C7DF; color: white; }
@@ -48,7 +48,7 @@ a {
   text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   text-align: inherit;
   margin: 0px;
@@ -197,25 +197,25 @@ p.lead {
   fill: white;
 }
 
-.pole {
+.next {
   display: block;
   text-align: center;
 }
 
-.pole svg {
+.next svg {
   max-width: 120px;
   height: 100px;
   display: block;
   opacity: 0.45;
   margin: 0 auto;
-  transition: all .25s ease-in-out;
+  transition: all .25s ease;
 }
 
-.pole path {
+.next path {
   fill: black;
 }
 
-.pole:hover svg {
+.next:hover svg {
   opacity: 1;
 }
 
@@ -243,8 +243,86 @@ section {
   padding: 2em 0;
 }
 
-#soon, #rsvp {
+#schedule, #rsvp {
   text-align: center;
+}
+
+.events {
+  position: relative;
+  margin: 60px auto;
+  max-width: 880px;
+}
+
+.events:after, .events:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.events .event {
+  position: relative;
+  clear: both;
+  float: left;
+  width: 45%;
+  margin: -25px 0;
+  padding: 15px;
+  box-shadow: 0 0 6px rgba(0,0,0,.5);
+  background: white;
+  color: black;
+  text-align: left;
+}
+
+.events .event:nth-child(2n+1) {
+  float: right;
+}
+
+.events .event:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-left: -40px;
+  background: #FFF;
+  box-shadow: 3px 3px rgba(0,0,0,.25);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 35%;
+  right: -25px;
+}
+
+.events .event:nth-child(2n+1):before {
+  right: auto;
+  left: 15px;
+}
+
+.pole {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  width: 6px;
+  background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,.25) 90%, rgba(0,0,0,0) 100%);
+}
+
+.event h3 {
+  border-bottom: 4px solid rgba(0, 0, 0, 0.25);
+  padding-bottom: 10px;
+  margin-bottom: 10px;}
+
+.event i {
+  float: left;
+  font-size: 36px;
+  margin-right: 10px;
+  line-height: 28px;
+}
+
+.event p {
+  margin: 12px 0;
+}
+
+.event .time {
+  float: right;
 }
 
 .facebook-button {
@@ -378,11 +456,19 @@ section {
   box-shadow: 0 0 12px #26C7DF;
 }
 
+#location a i {
+  font-size: 120%;
+  vertical-align: top;
+  display: inline;
+}
+
 #map {
   position: relative;
   height: 500px;
   display: block;
   background: #404040;
+  background: url(../img/giftly.png);
+  background-size: 150px;
 }
 
 #map iframe {
@@ -396,6 +482,17 @@ section {
   top: 50%;
   color: pink;
   font-size: 40px;
+}
+
+div.map-legend.wax-legend {
+  background: #26C7DF;
+  color: #FFF;
+  font-family: 'Exo 2', 'Open Sans', Arial;
+  box-shadow: 0 0 6px #808080;
+}
+
+.mapbox-control-info-right .mapbox-info-toggle {
+  display: none;
 }
 
 #location, #sponsors {
@@ -461,9 +558,7 @@ section {
 
 }
 
-
-
-footer {
+footer, #schedule  {
   background-image: url(/img/stripe.png);
   background-repeat: repeat-x;
   background-size: 10px 20px;
@@ -502,5 +597,11 @@ footer i {
   header p a {
     display: block;
     margin-bottom: 10px;
+  }
+  .events .event, .events .event:nth-child(2n+1) {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0 0;
   }
 }
